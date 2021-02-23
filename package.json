@@ -1,0 +1,27 @@
+{
+  "name": "teksys1",
+  "version": "1.0.0",
+  "description": "Skills Based assessment 1",
+  "scripts": {
+    "comments": "-k is a kill switch for concurrently. It kills all processes if one process fails, overriding default",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently -k \"sass --watch ./src:./dist\" \"pug -w ./src -o ./dist -P\" \"tsc -w\""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Gerald Ryan",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "@types/node": "^14.14.26"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "pug": "^3.0.0",
+    "sass": "^1.32.7",
+    "tsc": "^1.20150623.0",
+    "typescript": "^4.1.5"
+  }
+}

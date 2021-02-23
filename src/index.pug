@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title YourGetaway: Find your dream getaway
+    link(rel="stylesheet", href="index.css")
+    style(type='text/css').
+      h2{color: red}
+
+  body
+    header()
+      nav
+        .left-side-oriented
+          a(href="index.html") Home
+          a(href="popular.html") Popular
+        .right-side-oriented
+          a(href="host.html") Host
+          a(href="signup.html") Sign Up
+          a(href="login.html") Log In
+          a(href="contact.html") Contact
+      form#search-form
+        h2 Find where to stay with YourGetaway
+        p#form-description Discover private houses and entire homes for new adventures
+        div.fields-and-buttons
+          div.input-row
+            div.input-container
+              label#location-input-label.input-field-label(for="location") Location
+              input#location-input.input-field(name="location" type="text" placeholder="Enter location" minlength="4" maxlength="20")
+          div.input-row
+            div.input-container
+              label#checkin-input-label.input-field-label(for="checkin") Check In Date
+              input#checkin-input.input-field(name="checkin" type="date" placeholder="Enter check in date" minlength="4" maxlength="20")
+            div.input-container
+              label#checkout-input-label.input-field-label(for="checkout") Check Out Date
+              input#checkout-input.input-field(name="checkout" type="date" placeholder="Enter check out date" minlength="4" maxlength="20")
+          div.input-row
+            div.input-container
+              label#adults-input-label.input-field-label(for="adults") Adults
+              input#adults-input.input-field(name="adults" type="text" placeholder="Enter adults" minlength="4" maxlength="20")
+            div.input-container
+              label#children-input-label.input-field-label(for="children") Children
+              input#children-input.input-field(name="children" type="text" placeholder="Enter children" minlength="4" maxlength="20")
+          div.input-row
+            div.input-container
+              button#location-search-btn Search
+    section#section-one
+      br
+      br
+    section#section-two
+      div Hello World
+    footer(style="text-align:center") Copyright YourGetaway 2021
+    script(src="index.js")
