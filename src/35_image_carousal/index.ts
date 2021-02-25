@@ -20,3 +20,13 @@ function changeImage() {
   if (index < 0) index = img.length - 1;
   imgs.style.transform = `translateX(${-index*500}px)`
 }
+
+rightBtn.addEventListener('click', ()=>{
+   index++;
+   changeImage()
+})
+
+leftBtn.addEventListener('click', ()=>{
+  index--;
+  changeImage()
+})

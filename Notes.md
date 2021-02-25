@@ -63,6 +63,7 @@ outline-style: Draws elements outline- even outside the border. Didn't know anyt
 
 overflow(sh) => shorthand for -x/-y => visible (spills), hidden (clips), scroll, auto 
 
+
 **Shorthand properties cheatsheet**
 <!-- reminder if values aren't set in shorthand they override previous values with inherit -->
 - background (*color,image,repeat,position)
@@ -85,6 +86,8 @@ MouseEvent(i) called by 'click'|'dblclick'|'mouseup'|'mousedown'|'mousemove'
 <!-- Returns double flaoting point -->
 <!-- used on mozilla.org to do demos. Classname used is 'sample-code-frame'. Should be self explanatory. Sandbox of demo in their case.  -->
 
+contenteditable global attribute (no need for value) makes element editable by user!!
+global means can be used on all elements (though may not have an effect on some)
 
 
 
@@ -96,6 +99,12 @@ MouseEvent(i) called by 'click'|'dblclick'|'mouseup'|'mousedown'|'mousemove'
 4. mousedown + mousemove + mouseup combo for drawing or dragging 
 5. Position: Relative of Parent (does not move element unless you specify top|bottom|left|right-- but adds a new formatting context)
 <!-- 5. position:relative top:50px left:50px anchor a button inside another component -->
+6. Trick to centering things
+ - make a parent element with it's own block formatting context by giving it position: relative (does not move it)
+  -- give its child that you want to position in the center a position absolute, and give it 50%
+  --- give it negative margin equal to half of its pixel width or height, whichever you need to adjust.  
+
+
 
 ### Learning Stack
 -Media Queries  
