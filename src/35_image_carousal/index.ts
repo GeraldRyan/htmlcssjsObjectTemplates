@@ -3,13 +3,14 @@ const img = document.querySelectorAll("#imgs img"); // gets each image in image 
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
 let bInTrans = false;
+let direction = 'right';
 imgs.addEventListener("transitionend", () => (bInTrans = false));
 
 let index = 0;
 let interval = setInterval(runAuto, 5000);
 
 function runAuto() {
-  index++;
+  direction == 'right'? index++ : index --;
   changeImage();
 }
 
@@ -31,6 +32,7 @@ function resetInterval() {
 
 rightBtn.addEventListener("click", () => {
   if (!bInTrans) {
+    direction = 'right'
     index++;
     changeImage();
     resetInterval();
@@ -38,6 +40,7 @@ rightBtn.addEventListener("click", () => {
 });
 
 leftBtn.addEventListener("click", () => {
+  direction = 'left'
   index--;
   resetInterval();
   changeImage();
