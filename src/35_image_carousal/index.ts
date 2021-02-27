@@ -14,10 +14,9 @@ function runAuto() {
   changeImage();
 }
 
-// Does not loop back like a buffer, hsa to roll back to beginning. SO maybe not best algorithm. ALso note pure CSS but can you do pure css and still have buttons? Is this best way in field?
+// Does not loop back like a buffer, hsa to roll back to beginning. So maybe not best algorithm. ALso note pure CSS but can you do pure css and still have buttons? Is this best way in field?
 
 // TODO make it a circular buffer.
-//TODO give auto image change a direction based on last button pressed (next/prev)
 function changeImage() {
   bInTrans = true;
   if (index >= img.length) index = 0;
