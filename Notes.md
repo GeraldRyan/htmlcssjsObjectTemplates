@@ -63,6 +63,14 @@ outline-style: Draws elements outline- even outside the border. Didn't know anyt
 
 overflow(sh) => shorthand for -x/-y => visible (spills), hidden (clips), scroll, auto 
 
+Combinators: 
+-- for more on combinators, see Haskell Curry. It's a whole field. 
+' ' Descendant combinator (yes, empty space is a combinator; see the docs) 
+> child combinator
++ adjacent sibling selector 
+~ general sibling combinator
+
+
 
 **Shorthand properties cheatsheet**
 <!-- reminder if values aren't set in shorthand they override previous values with inherit -->
@@ -79,7 +87,8 @@ MouseEvent(i) called by 'click'|'dblclick'|'mouseup'|'mousedown'|'mousemove'
     many co-ordinate based (x,y) getters. Read the docs. 
 
 
-
+## Critical JS 
+ - setInterval
 
 ### Advanced HTML  
 <iframe> => renders a whole new document object within a document object, viewport or browser window. 
