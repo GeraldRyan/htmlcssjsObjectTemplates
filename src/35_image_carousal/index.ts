@@ -2,7 +2,8 @@ const imgs = document.getElementById("imgs");
 const img = document.querySelectorAll("#imgs img"); // gets each image in image container
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
-let bIsMoving = false;
+let bInTrans = false;
+imgs.addEventListener("transitionend", () => (bInTrans = false));
 
 let index = 0;
 let interval = setInterval(runAuto, 5000);
@@ -17,10 +18,10 @@ function runAuto() {
 // TODO make it a circular buffer.
 //TODO give auto image change a direction based on last button pressed (next/prev)
 function changeImage() {
+  bInTrans = true;
   if (index >= img.length) index = 0;
   if (index < 0) index = img.length - 1;
   imgs.style.transform = `translateX(${-index * 500}px)`;
-  bIsMoving = false;
 }
 
 function resetInterval() {
@@ -29,8 +30,7 @@ function resetInterval() {
 }
 
 rightBtn.addEventListener("click", () => {
-  if (!bIsMoving) {
-    console.log(!bIsMoving)
+  if (!bInTrans) {
     index++;
     changeImage();
     resetInterval();
